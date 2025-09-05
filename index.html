@@ -119,53 +119,75 @@
 								</header>
 								<form action="#" method="post">
 									<div>              
-										<div class="row">
-  											  <!-- LinkedIn -->
-											  <div class="col-8 col-6-medium col-12-small">
-											    <div class="badge-base LI-profile-badge"
-											         data-locale="pl_PL"
-											         data-size="large"
-											         data-theme="light"
-											         data-type="HORIZONTAL"
-											         data-vanity="krzysztof-baumgart-5b34a827a"
-											         data-version="v1">
-											      <a class="badge-base__link LI-simple-link"
-											         href="https://pl.linkedin.com/in/krzysztof-baumgart-5b34a827a?trk=profile-badge">
-											      </a>
-											    </div>
-											    <script src="https://platform.linkedin.com/badges/js/profile.js"
-											            async defer type="text/javascript"></script>
-											  </div>
-											  <!-- Twitter -->
-											  <div class="col-4 col-4-medium col-8-small">
-											    <a href="https://twitter.com/intent/tweet?screen_name=Kri5u46690"
-											       class="twitter-mention-button"
-											       data-show-count="false">
-											       Tweet to @Kri5u
-											    </a>
-											    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-											  </div>
-											
-											  <!-- Email -->
-											  <div class="col-2 col-4-medium col-8-small">
-											    <p>
-											      Email me at:
-											      <a href="mailto:krzysztofbaumgart@hotmail.com">krzysztofbaumgart@hotmail.com</a>
-											    </p>
-											  </div>
-											
-											</div>
-										<!--
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div> -->
+										<!-- Contact Section -->
+										<section class="contact-grid">
+										  <!-- Left: LinkedIn -->
+										  <div class="contact-left">
+										    <div class="badge-base LI-profile-badge"
+										         data-locale="pl_PL"
+										         data-size="large"
+										         data-theme="light"
+										         data-type="HORIZONTAL"
+										         data-vanity="krzysztof-baumgart-5b34a827a"
+										         data-version="v1">
+										      <a class="badge-base__link LI-simple-link"
+										         href="https://pl.linkedin.com/in/krzysztof-baumgart-5b34a827a?trk=profile-badge"></a>
+										    </div>
+										    <script src="https://platform.linkedin.com/badges/js/profile.js"
+										            async defer type="text/javascript"></script>
+										  </div>
+										
+										  <!-- Right: Twitter (top) + Email (bottom) -->
+										  <div class="contact-right">
+										    <div class="contact-card">
+										      <a href="https://twitter.com/intent/tweet?screen_name=Kri5u46690"
+										         class="twitter-mention-button"
+										         data-show-count="false">
+										         Tweet to @Kri5u
+										      </a>
+										      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+										    </div>
+										
+										    <div class="contact-card">
+										      <p>
+										        Email me at:
+										        <a href="mailto:krzysztofbaumgart@hotmail.com">krzysztofbaumgart@hotmail.com</a>
+										      </p>
+										    </div>
+										  </div>
+										</section>
+										
+										<style>
+										  .contact-grid {
+										    display: grid;
+										    grid-template-columns: 2fr 1fr; /* Left wide, right narrow */
+										    gap: 1rem;
+										    align-items: start;
+										  }
+										
+										  .contact-right {
+										    display: grid;
+										    grid-template-rows: auto auto; /* Twitter on top, Email below */
+										    gap: 1rem;
+										  }
+										
+										  /* Optional: simple card styling for visual consistency */
+										  .contact-card {
+										    padding: 0.75rem 1rem;
+										    border: 1px solid #e5e7eb;
+										    border-radius: 8px;
+										  }
+										
+										  /* Responsive: stack on small screens */
+										  @media (max-width: 768px) {
+										    .contact-grid {
+										      grid-template-columns: 1fr; /* single column */
+										    }
+										    .contact-right {
+										      grid-template-rows: auto auto; /* stays stacked */
+										    }
+										  }
+										</style>
 									</div>
 								</form>
 							</article>
@@ -193,6 +215,7 @@
 	</body>
 
 </html>
+
 
 
 
